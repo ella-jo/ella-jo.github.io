@@ -334,7 +334,7 @@ a:active {
     border-style: solid;
     border-width: var(--size-2);
     color: var(--color-yellow);
-    cursor: pointer; /* Update the cursor when hovered */
+    cursor: pointer;
     font-size: clamp(var(--size-16), var(--size-18), var(--size-20));
     padding-block: var(--size-16);
     padding-inline: var(--size-24);
@@ -406,8 +406,8 @@ a:active {
     border-image: var(--accent-gradient-border);
     border-style: solid;
     border-width: var(--size-2);
-    grid-column: 1 / -1; /* cover all three columns */
-    grid-row: 2; /* position in the second row */
+    grid-column: 1 / -1;
+    grid-row: 2;
     padding: var(--size-36);
 }
 
@@ -422,13 +422,12 @@ a:active {
     display: grid;
     font-size: var(--size-18);
     grid-column: var(--n) / span 1;
-    grid-row: 1; /* First subgrid row */
-    padding: var(--size-16); /* Some breathing room */
+    grid-row: 1;
+    padding: var(--size-16);
     text-align: center;
     z-index: 1;
 }
 
-/* Style the <summary> element when <details> is [open] */
 .tab[open] .tab__label {
     background-image: var(--accent-gradient);
     color: var(--color-dark-turqoise);
