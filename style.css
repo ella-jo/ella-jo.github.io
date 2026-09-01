@@ -1,0 +1,442 @@
+:root {
+    --color-light-yellow: #F0ECBC;
+    --color-yellow: #E2DE84;
+    --color-orange: #F79256;
+    --color-blue: #BCD2EE;
+    --color-turquoise: #244042;
+    --color-dark-turqoise: #213B3D;
+    --accent-gradient: linear-gradient(to right, var(--color-orange) 0%, var(--color-blue) 50%, var(--color-yellow) 100%);
+    --accent-gradient-border: var(--accent-gradient) 1;
+    --font-stack-display: "Special Gothic Expanded One", sans-serif;
+    --font-stack-copy: "Epilogue", sans-serif;
+
+    --size-0: 0;
+    --size-2: 2px;
+    --size-4: 4px;
+    --size-6: 6px;
+    --size-12: 12px;
+    --size-16: 16px;
+    --size-18: 18px;
+    --size-20: 20px;
+    --size-24: 24px;
+    --size-28: 28px;
+    --size-30: 30px;
+    --size-32: 32px;
+    --size-36: 36px;
+    --size-40: 40px;
+    --size-46: 46px;
+    --size-48: 48px;
+    --size-58: 58px;
+    --size-60: 60px;
+    --size-64: 64px;
+    --size-90: 90px;
+}
+
+body {
+    color: var(--color-blue);
+    font-family: var(--font-stack-copy);
+    font-size: clamp(var(--size-16), var(--size-18), var(--size-20));
+    font-weight: 300;
+    line-height: 1.5;
+    margin: var(--size-0);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-stack-display);
+    font-weight: normal;
+    margin-block-start: var(--size-0);
+    margin-block-end: var(--size-12);
+}
+
+.subtitle {
+    font-size: clamp(var(--size-24), var(--size-30), var(--size-32));
+    margin-block-end: var(--size-16);
+}
+
+p {
+    font-size: clamp(var(--size-16), var(--size-18), var(--size-20));
+    margin-block-start: var(--size-0);
+    margin-block-end: var(--size-12);
+}
+
+h1 {
+    font-size: var(--size-46);
+    margin-block: var(--size-0);
+
+    @media screen and (min-width: 960px) {
+        font-size: clamp(var(--size-48), var(--size-58), var(--size-64));
+    }
+}
+
+h2 {
+    font-size: clamp(var(--size-36), var(--size-40), var(--size-48));
+}
+
+h3 {
+    font-size: clamp(var(--size-28), var(--size-32), var(--size-36));
+}
+
+h4 {
+    font-family: "Epilogue", sans-serif;
+    font-size: clamp(var(--size-18), var(--size-20), var(--size-24));
+    font-weight: 500;
+}
+
+a {
+    color: var(--color-yellow);
+}
+
+a:hover {
+    color: var(--color-light-yellow);
+    text-decoration: none;
+}
+
+a:focus-visible {
+    outline-color: var(--color-yellow);
+    outline-offset: var(--size-4);
+    outline-style: dotted;
+    outline-width: var(--size-2);
+}
+
+a:active {
+    color: var(--color-yellow);
+    text-decoration: underline;
+}
+
+
+.page-body {
+    background-color: var(--color-dark-turqoise);
+}
+
+.site-header {
+    align-items: center;
+    backdrop-filter: blur(10px);
+    column-gap: var(--size-24);
+    display: flex;
+    justify-content: space-between;
+    padding-block: var(--size-6);
+    padding-inline: var(--size-12);
+    position: sticky;
+    top: var(--size-0);
+    z-index: 2;
+
+    @media screen and (min-width: 768px) {
+        padding-inline: var(--size-24);
+    }
+
+    @media screen and (min-width: 960px) {
+        padding-inline: var(--size-60);
+    }
+}
+
+.site-footer {
+    align-items: center;
+    background-color: var(--color-dark-turqoise);
+    column-gap: var(--size-24);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding-block: var(--size-24);
+    padding-inline: var(--size-12);
+
+    @media screen and (min-width: 768px) {
+        padding-inline: var(--size-24);
+    }
+
+    @media screen and (min-width: 960px) {
+        padding-inline: var(--size-60);
+    }
+}
+
+.site-footer:has(.nav-list) .nav-list {
+    column-gap: var(--size-28);
+    font-size: var(--size-16);
+
+    a {
+        text-decoration: underline;
+    }
+}
+
+.site-branding {
+    font-size: var(--size-20);
+    text-decoration: none;
+    white-space: nowrap;
+
+    @media screen and (min-width: 768px) {
+        font-size: var(--size-24);
+    }
+}
+
+.copyright {
+    font-size: var(--size-16);
+    margin-block-end: var(--size-0);
+    white-space: nowrap;
+}
+
+.nav-list {
+    column-gap: var(--size-24);
+    display: flex;
+    flex-wrap: wrap;
+    font-size: var(--size-16);
+    justify-content: flex-end;
+    list-style-type: none;
+    padding-inline-start: var(--size-0);
+    row-gap: var(--size-12);
+
+    a {
+        text-decoration: none;
+    }
+
+    a:hover, a:focus {
+        text-decoration: underline;
+    }
+
+     @media screen and (min-width: 768px) {
+        column-gap: var(--size-36);
+        font-size: var(--size-20);
+    }
+
+    @media screen and (min-width: 960px) {
+        column-gap: var(--size-64);
+    }
+}
+
+
+
+.section__wrap {
+    background-repeat: repeat;
+    background-size: cover;
+}
+
+.section__wrap--dots {
+    background-image: url("/assets/dots-bg.svg");
+}
+
+.section__wrap--grid {
+    background-image: url("/assets/grid.svg");
+
+}
+
+.section__wrap--diag-stripes {
+    background-image: url("/assets/diag-stripes.svg");
+}
+
+.section__wrap--vert-stripes {
+    background-image: url("/assets/vert-stripes.svg");
+}
+
+.section__wrap--lattice {
+    background-image: url("/assets/lattice.svg");
+}
+
+.section {
+    margin-inline: auto;
+    max-inline-size: 1200px;
+    padding-block: var(--size-40);
+    padding-inline: var(--size-20);
+
+    @media screen and (min-width: 440px) {
+        padding-block: var(--size-60);
+        padding-inline: var(--size-40);
+    }
+
+    @media screen and (min-width: 600px) {
+        padding-block: var(--size-90);
+        padding-inline: var(--size-60);
+    }
+}
+
+.section--narrow {
+    max-inline-size: 1080px;
+}
+
+.intro {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--size-36);
+    justify-self: center;
+    max-inline-size: 960px;
+
+    @media screen and (min-width: 768px) {
+        flex-wrap: nowrap;
+    }
+    
+}
+
+.two-col {
+    display: grid;
+    gap: var(--size-24);
+    grid-template-columns: 1fr;
+
+    @media screen and (min-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.border-radius-circle {
+    border-radius: 50%;
+}
+
+.grad-image {
+    border-image: var(--accent-gradient-border);
+    border-style: solid;
+    border-width: var(--size-4);
+    margin-inline: auto;
+}
+
+.experience-grid {
+    display: grid;
+    gap: var(--size-24);
+    grid-template-areas:
+    'education' 'career' 'skills';
+    grid-template-columns: 1fr;
+
+    @media screen and (min-width: 960px) {
+        grid-template-areas: 'education education' 'career skills';
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (min-width: 1200px) {
+        grid-template-areas: 'education education education' 'career career skills';
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .education {
+        grid-area: education;
+    }
+
+    .career {
+        grid-area: career;
+    }
+
+    .skills {
+        grid-area: skills;
+    }       
+}
+
+
+
+.card {
+    background-color: var(--color-turqoise);
+    border-image: var(--accent-gradient-border);
+    border-style: solid;
+    border-width: var(--size-2);
+    padding-block: var(--size-18);
+    padding-inline: var(--size-36);
+}
+
+.font-size-small {
+    font-size: var(--size-16);
+}
+
+.tab__label {
+    border-image: var(--accent-gradient-border);
+    border-style: solid;
+    border-width: var(--size-2);
+    color: var(--color-yellow);
+    cursor: pointer; /* Update the cursor when hovered */
+    font-size: clamp(var(--size-16), var(--size-18), var(--size-20));
+    padding-block: var(--size-16);
+    padding-inline: var(--size-24);
+}
+
+.tab__label:hover {
+    background-image: var(--accent-gradient);
+    color: var(--color-dark-turqoise);
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+.tab__label:focus-visible {
+    outline-color: var(--color-yellow);
+    outline-offset: -10px;
+    outline-style: dotted;
+    outline-width: var(--size-2);
+}
+.tab__label::marker {
+    content: '';
+}
+
+.tab[open]::details-content {
+    background-color: var(--color-turqoise);
+    border-image: var(--accent-gradient-border);
+    border-style: solid;
+    border-width: var(--size-2);
+    padding: var(--size-36);
+}
+
+.tab[open] summary {
+    background-image: var(--accent-gradient);
+    color: var(--color-dark-turqoise);
+}
+
+.tab::details-content {
+    margin-bottom: var(--size-6);
+}
+
+.tab__content {
+    position: relative;
+    z-index: 1;
+}
+
+
+@media screen and (min-width: 800px) {
+.tabs {
+    border-image: var(--accent-gradient-border);
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-style: solid;
+    border-width: var(--size-2);
+    column-gap: var(--size-16);
+    display: grid;
+    grid-template-columns: repeat(4, minmax(auto, 1fr));
+    grid-template-rows: auto 1fr;
+}
+
+.tab {
+    display: grid;
+    grid-column: 1 / -1;
+    grid-row: 1 / span 3;
+    grid-template-columns: subgrid;
+    grid-template-rows: subgrid;
+}
+
+.tab::details-content {
+    border-image: var(--accent-gradient-border);
+    border-style: solid;
+    border-width: var(--size-2);
+    grid-column: 1 / -1; /* cover all three columns */
+    grid-row: 2; /* position in the second row */
+    padding: var(--size-36);
+}
+
+.tab:not([open])::details-content {
+    display: none;
+}
+
+.tab__label {
+    background-image: none;
+    border-bottom: none;
+    color: var(--color-yellow);
+    display: grid;
+    font-size: var(--size-18);
+    grid-column: var(--n) / span 1;
+    grid-row: 1; /* First subgrid row */
+    padding: var(--size-16); /* Some breathing room */
+    text-align: center;
+    z-index: 1;
+}
+
+/* Style the <summary> element when <details> is [open] */
+.tab[open] .tab__label {
+    background-image: var(--accent-gradient);
+    color: var(--color-dark-turqoise);
+    font-weight: 400;
+}
+
+.tabs:has(.tab[open])  {
+    border: none;
+}
+
+}
