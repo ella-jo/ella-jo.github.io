@@ -288,16 +288,16 @@ a:active {
     display: grid;
     gap: var(--size-24);
     grid-template-areas:
-    'education' 'career' 'skills';
+    'education' 'career' 'skills' 'proficiences';
     grid-template-columns: 1fr;
 
     @media screen and (min-width: 960px) {
-        grid-template-areas: 'education education' 'career skills';
+        grid-template-areas: 'education skills' 'career proficiencies';
         grid-template-columns: repeat(2, 1fr);
     }
 
     @media screen and (min-width: 1200px) {
-        grid-template-areas: 'education education education' 'career career skills';
+        grid-template-areas: 'education education skills' 'career career proficiencies';
         grid-template-columns: repeat(3, 1fr);
     }
     
@@ -307,6 +307,10 @@ a:active {
 
     .career {
         grid-area: career;
+    }
+
+    .proficiencies {
+        grid-area: proficiencies;
     }
 
     .skills {
